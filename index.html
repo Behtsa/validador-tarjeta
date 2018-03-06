@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Producto Final</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+</head>
+<body>
+  <div class="container-fluid">
+    <nav>
+      <div class="nav-wrapper col s12">
+        <a href="#" class="brand-logo center-align">Validador de tarjeta</a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="cn" type="text" class="validate" required="true" minlength="13" maxlength="16" pattern="[0-9]{1,16}">
+            <label for="cn">Número de tarjeta</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="exp" type="month" class="validate" required="true" min="2018-02" max="2028-02">
+            <!--<label for="exp">Fecha de vencimiento</label>-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s3">
+            <input id="cvv" type="text" class="validate" required="true" pattern="[0-9]{3}">
+            <label for="cvv">CVV</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="name" type="text" class="validate" required="true" pattern="([A-Za-z]{1}[A-Za-z]{1,30}[\s]*)+">
+            <label for="name">Nombre completo</label>
+          </div>
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Pagar</button>
+      </form>
+    </div>
+  </div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
